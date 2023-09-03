@@ -17,7 +17,7 @@ const useStyles = makeStyles(() => ({
   },
   listItem: {
     border: '1px solid #ccc',
-    marginBottom: '2px', // Fix the missing 'px' here
+    marginBottom: '2px',
   },
 }));
 
@@ -27,7 +27,7 @@ function TrainsList() {
 
   useEffect(() => {
     const authToken =
-      'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTM3MjcwNzEsImNvbXBhbnlOYW1lIjoiVHJhaW4gVGlja2V0IFJlc2VydmF0aW9uIiwiY2xpZW50SUQiOiIzYzQ4MTFmMi0yN2M1LTRjY2YtOWM0Mi1jMDA0ZjU5ODdiYjIiLCJvd25lck5hbWUiOiIiLCJvd25lckVtYWlsIjoiIiwicm9sbE5vIjoiMTI0MDAzMjc4In0.ovQwHF7OZgDPkJFgS14Dk3nA8i2PD3Vrdv__bEKLN18'; 
+      'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTM3Mjg4NjcsImNvbXBhbnlOYW1lIjoiVHJhaW4gVGlja2V0IFJlc2VydmF0aW9uIiwiY2xpZW50SUQiOiIzYzQ4MTFmMi0yN2M1LTRjY2YtOWM0Mi1jMDA0ZjU5ODdiYjIiLCJvd25lck5hbWUiOiIiLCJvd25lckVtYWlsIjoiIiwicm9sbE5vIjoiMTI0MDAzMjc4In0.XB5ycqlPJC2uZJox1JMnI01tgDVgSIqFiOTlqW-n_pE'; 
 
     const headers = {
       'Authorization': `Bearer ${authToken}`,
@@ -64,10 +64,10 @@ function TrainsList() {
               />
               <ListItemSecondaryAction>
                 <Typography variant="subtitle1">
-                  Sleeper Price: ${train.price.sleeper}
+                  Sleeper Price: Rs.{train.price.sleeper}
                 </Typography>
                 <Typography variant="subtitle1">
-                  AC Price: ${train.price.AC}
+                  AC Price: Rs.{train.price.AC}
                 </Typography>
                 <Typography variant="subtitle2" color="error">
                   Delayed by: {train.delayedBy} minutes
